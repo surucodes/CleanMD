@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CleanMD</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>CleanMD</h1>
+
+  <fieldset id="formats">
+    <legend>Paste destination</legend>
+  </fieldset>
+
+  <fieldset>
+    <legend>Also convert</legend>
+    <label class="option">
+      <input type="checkbox" name="convertSelection">
+      <span>Selected response text on Ctrl/⌘+C</span>
+    </label>
+    <label class="option">
+      <input type="checkbox" name="overrideNativeCopy">
+      <span>The chat site's own Copy button</span>
+    </label>
+  </fieldset>
+
+  <script src="../src/settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

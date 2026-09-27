@@ -1,0 +1,16 @@
+{
+  "name": "cleanmd",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Copy ChatGPT / Claude / Copilot responses as clean Markdown for Obsidian and Azure DevOps Wiki",
+  "scripts": {
+    "vendor": "node scripts/vendor.js",
+    "postinstall": "node scripts/vendor.js",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1",
+    "turndown": "^7.2.4",
+    "turndown-plugin-gfm": "^1.0.2"
+  }
+}

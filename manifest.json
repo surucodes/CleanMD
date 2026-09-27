@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "CleanMD — LLM Markdown Copy",
+  "version": "0.1.0",
+  "description": "Copy ChatGPT, Claude and Microsoft 365 Copilot responses as clean Markdown for Obsidian or Azure DevOps Wiki.",
+  "permissions": ["storage", "clipboardWrite"],
+  "action": {
+    "default_title": "CleanMD",
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://claude.ai/*",
+        "https://m365.cloud.microsoft/*",
+        "https://copilot.cloud.microsoft/*",
+        "https://www.microsoft365.com/*",
+        "https://copilot.microsoft.com/*"
+      ],
+      "js": [
+        "lib/turndown.js",
+        "lib/turndown-plugin-gfm.js",
+        "src/settings.js",
+        "src/platforms.js",
+        "src/converter.js",
+        "src/content.js"
+      ],
+      "css": ["src/content.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
